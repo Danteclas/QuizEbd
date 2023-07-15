@@ -1,0 +1,18 @@
+<div class="container bg-light py-5">
+  <h1 class="display-5 fw-bold">Bem-vindo ao QUIZ EBD</h1>
+  <p class="col-md-8 fs-4">Este quiz contém 10 questões.Valendo 10 pontos cada uma</p>
+  <h4>Regras:</h4>
+  <ol>
+    <li>Questões corretas 10 pontos</li>
+    <li>Questões incorretas -10 pontos</li>
+    <li>Você terá 60 sec para responder cada questão</li>
+    <li>Ao atualizar a página o Quiz volta ao ponto inicial </li>
+
+  </ol>
+  <h1 style="font-family: cursive;text-align: center;">Boa Sorte!!</h1>
+  <div class="name col-md4 my-3">
+    <label for="">Digite seu nome:</label>
+    <input #name type="text" class="form-control">
+  </div>
+  <button class="btn btn-primary btn-lg" routerLink="/question" (click)="startQuiz()">Começar</button>
+</div>
