@@ -1,20 +1,20 @@
 {
   "questions": [
     {
-      "questionText": "Segundo a lição 2 ,Tentação e Provação qual a diferença?",
+      "questionText": "Segundo a lição 2 ,O que  é Tentação ?",
       "options": [
         {
-          "text": ":",
+          "text": "A tentação leva o homem ao erro ",
           "correct": true
         },
         {
-          "text": ";"
+          "text": "A tentação prova o homem "
         },
         {
-          "text": "!"
+          "text": "A tentação é um teste para aprovação"
         },
         {
-          "text": "&"
+          "text": "O pecado é a tentação"
         }
       ],
       "explanation": "TS uses a colon (:) to separate the property name from the property type"

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionService } from '../service/question.service';
 import { interval } from 'rxjs';
+import { QuestionService } from '../service/question.service';
+
 
 @Component({
   selector: 'app-question',
@@ -17,6 +18,8 @@ export class QuestionComponent implements OnInit {
   correctAnswer: number = 0;
   inCorrectAnswer: number = 0;
   interval$: any;
+  progress: string = "0";
+  isQuizCompleted: boolean = false;
   constructor(private questionService: QuestionService) { }
 
   ngOnInit(): void {
@@ -37,15 +40,29 @@ export class QuestionComponent implements OnInit {
     this.currentQuestion--;
   }
   answer(currentQno: number, option: any) {
+    if (currentQno === this.questionList.length) {
+      this.isQuizCompleted = true;
+      this.stopCounter();
+    }
 
     if (option.correct) {
       this.points += 10;
       this.correctAnswer++;
-      this.currentQuestion++;
+      setTimeout(() => {
+        this.currentQuestion++;
+        this.resetCounter();
+        this.getProgressPercent();
+      }, 1000);
     } else {
+
+      setTimeout(() => {
+        this.currentQuestion++;
+        this.inCorrectAnswer++;
+        this.resetCounter();
+        this.getProgressPercent();
+      }, 1000);
+
       this.points = 10;
-      this.currentQuestion++;
-      this.inCorrectAnswer++;
     }
   }
   startCounter() {
@@ -76,6 +93,12 @@ export class QuestionComponent implements OnInit {
     this.getAllQuestions();
     this.points = 0;
     this.counter = 60;
+    this.currentQuestion = 0;
+    this.progress = "0";
+  }
+  getProgressPercent() {
+    this.progress = ((this.currentQuestion / this.questionList.length) * 100).toString();
+    return this.progress;
   }
 }
 
