@@ -20,42 +20,42 @@
       "explanation": "TS uses a colon (:) to separate the property name from the property type"
     },
     {
-      "questionText": "Which of the following is NOT a type used in TypeScript?",
+      "questionText": "Qual foi o pecado de Satanás ,citado na lição ?",
       "options": [
         {
-          "text": "number"
+          "text": "Mentira"
         },
         {
-          "text": "string"
+          "text": "Rebelião"
         },
         {
-          "text": "boolean"
+          "text": "Inveja e Altivez"
         },
         {
-          "text": "enum",
+          "text": "Soberba e Orgulho",
           "correct": true
         }
       ],
       "explanation": "enum is not used as a type in TypeScript"
     },
     {
-      "questionText": "How can we specify properties and methods for an object in TypeScript?",
+      "questionText": "Depois da queda do inimigo , qual foi o seu maior propósito de existência?",
       "options": [
         {
-          "text": "Use classes."
-        },
-        {
-          "text": "Use interfaces.",
+          "text": "Se opor a obra de Deus e sua existência .",
           "correct": true
         },
         {
-          "text": "Use enums."
+          "text": "guerrear contra o homem."
         },
         {
-          "text": "Use async/await."
+          "text": "Vingar-se da humanidade."
+        },
+        {
+          "text": "Fazer o homem pecar."
         }
       ],
-      "explanation": "interfaces are typically used to list the properties and methods for an object"
+      "explanation": ""
     },
     {
       "questionText": "How else can Array<number> be written in TypeScript?",
